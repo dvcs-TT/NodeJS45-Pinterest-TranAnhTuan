@@ -1,0 +1,414 @@
+{
+  "info": {
+    "_postman_id": "9fcd339b-7d08-43f5-8165-05b4640a0c09",
+    "name": "Pinterest_Express-Prisma",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23041788"
+  },
+  "item": [
+    {
+      "name": "READ ME",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/readme",
+          "host": ["{{domain}}"],
+          "path": ["readme"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"messi@argentina.com\",\r\n    \"mat_khau\": \"Messi#0709\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/login",
+          "host": ["{{domain}}"],
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/logout",
+          "host": ["{{domain}}"],
+          "path": ["logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sign Up (CREATE User)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"ho_ten\": \"Koyomi Araragi\",\r\n    \"email\": \"koyomiararagi@gmail.com\",\r\n    \"tuoi\": 16,\r\n    \"mat_khau\": \"KoyomiBook@1209\",\r\n    \"anh_dai_dien\": \"https://i.imgur.com/r3SBcv5.png\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/signup",
+          "host": ["{{domain}}"],
+          "path": ["signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Images",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/images",
+          "host": ["{{domain}}"],
+          "path": ["images"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Image Info by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/images/9",
+          "host": ["{{domain}}"],
+          "path": ["images", "9"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Comment by Image ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/comments/image/4",
+          "host": ["{{domain}}"],
+          "path": ["comments", "image", "4"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Image by Name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/images/search/pi",
+          "host": ["{{domain}}"],
+          "path": ["images", "search", "pi"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Is Image Saved",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/images/is-saved/2/4",
+          "host": ["{{domain}}"],
+          "path": ["images", "is-saved", "2", "4"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"ngay_binh_luan\": \"2022-12-11T06:27:51.044Z\",\r\n    \"noi_dung\": \"It's time to act, let's go\",\r\n    \"hinh_id\": 2,\r\n    \"nguoi_dung_id\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/comments/post",
+          "host": ["{{domain}}"],
+          "path": ["comments", "post"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/users",
+          "host": ["{{domain}}"],
+          "path": ["users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/users/4",
+          "host": ["{{domain}}"],
+          "path": ["users", "4"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Images created by User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/users/3/images",
+          "host": ["{{domain}}"],
+          "path": ["users", "3", "images"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Images saved by User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/users/2/saved-images",
+          "host": ["{{domain}}"],
+          "path": ["users", "2", "saved-images"],
+          "query": [
+            {
+              "key": "",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Image",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{domain}}/images/delete/10",
+          "host": ["{{domain}}"],
+          "path": ["images", "delete", "10"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPLOAD Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "createdImage",
+              "type": "file",
+              "src": "/C:/Users/khuct/Pictures/Blue_Archive/Blue_Archive_08.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{domain}}/images/upload/",
+          "host": ["{{domain}}"],
+          "path": ["images", "upload", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ten_hinh\": \"So High!\",\r\n  \"duong_dan\": \"https://www.worldatlas.com/r/w1200/upload/c5/de/3c/shutterstock-598924397.jpg\",\r\n  \"mo_ta\": \"At the peak of the mountain\",\r\n  \"nguoi_dung_id\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/images/create",
+          "host": ["{{domain}}"],
+          "path": ["images", "create"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "authtoken",
+            "value": "{{authToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nguoi_dung_id\": 2,\r\n    \"ho_ten\": \"Angel\",\r\n    \"email\": \"angel@heaven.com\",\r\n    \"tuoi\": 1000,\r\n    \"mat_khau\": \"isAngel#Real3\",\r\n    \"anh_dai_dien\": \"https://pbs.twimg.com/media/E4K6Q7-WQAQxvXs.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/users/update",
+          "host": ["{{domain}}"],
+          "path": ["users", "update"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "domain",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    { "key": "authToken", "value": "", "type": "string" }
+  ]
+}
